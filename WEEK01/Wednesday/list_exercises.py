@@ -63,6 +63,19 @@ for i in range(0, len(matrix1)):
 print(addition)
 
 # 10. Matrix Addition II
+# Use your solution in Matrix Addition, and extend it to work for a pair of matrices of any size, 
+# as long as they have the same size.
 
+# I believe my solution under exercise 9 already does so.
 
 # 11. De-dup
+# Given a list of numbers or strings, create a new list containing the same elements as the first list, 
+# except with any duplicate values removed. Print the list.
+duplicates_list = ["Arctic Desert", "Kalahari Desert", "Sahara Desert", "Sahara Desert", "Sahara Desert", "Arabian Desert", "Gobi Desert", "Kalahari Desert", "Great Basic Desert", "Syrian Desert", "Kalahari Desert", "Great Basic Desert", "Sahara Desert"]
+
+uniq_list = []
+for x in duplicates_list:
+    if x not in uniq_list:
+        uniq_list.append(x)
+
+print(uniq_list)
