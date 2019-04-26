@@ -12,6 +12,6 @@ def reverse_words_in_sentence(sentence):
         # reverse each word and add it to the reversed_words list
         reversed_words.append(word[::-1])
 
-    print(', '.join(reversed_words))
+    print(' '.join(reversed_words))
 
 reverse_words_in_sentence("Hello world!")
