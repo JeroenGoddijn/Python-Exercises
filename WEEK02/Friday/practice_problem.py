@@ -15,3 +15,21 @@ def reverse_words_in_sentence(sentence):
     print(' '.join(reversed_words))
 
 reverse_words_in_sentence("Hello world!")
+
+
+### More extensive option without using builtin functions:
+
+string = "Hello World!"
+backwards_word = []
+new_string = []
+string_list = []
+
+split_string = string.split(" ")
+
+for word in split_string:
+    for i in range(len(word)-1,-1,-1):
+        backwards_word.append(word[i])
+    single_string = ''.join(backwards_word)
+    string_list.append(single_string)
+    single_string = []
+    backwards_word = []
