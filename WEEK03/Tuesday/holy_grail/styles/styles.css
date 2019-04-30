@@ -1,0 +1,73 @@
+body {
+  text-align: center;  /* This is a hack for older browsers to center the page */
+}
+
+#container {
+  margin: 0 auto;
+  text-align: left;
+}
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;  /* This sets the header to stretch the full page width */
+  height: 10%;
+  background-color: teal;
+  color: white;
+}
+
+#navigation li {
+  display: inline;  /* Make our navigation display in a line */
+  padding: 10px;
+}
+
+#content {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  float: left;  /* This causes the content to move to the right */
+  width: 58%;  /* We need to set the width whenever we float an element */
+  height: 80%;
+  padding-left: 1%;
+  padding-right: 1%;
+  background-color: midnightblue;
+  color: antiquewhite;
+  display: block;
+}
+
+#sidebar-left {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  float: left;  /* This causes the sidebar to move to the left */
+  width: 18%;  /* We need to set the width whenever we float an element */
+  height: 80%;
+  padding-left: 1%;
+  padding-right: 1%;
+  background-color: green;
+  color: white;
+}
+
+#sidebar-right {
+  position: absolute;
+  top: 10%;
+  left: 80%;
+  float: right;  /* This causes the sidebar to move to the right */
+  width: 18%;  /* We need to set the width whenever we float an element */
+  height: 80%;
+  padding-left: 1%;
+  padding-right: 1%;
+  background-color: green;
+  color: white;
+}
+
+#footer {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  clear: both;  /* This makes sure that the footer clears both the sidebar and content floats */
+  width: 100%;  /* This sets the footer to stretch the full page width */
+  height: 10%;
+  background-color: #666666;
+  color: antiquewhite;
+}

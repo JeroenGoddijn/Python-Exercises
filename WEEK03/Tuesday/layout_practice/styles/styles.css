@@ -1,0 +1,41 @@
+body {
+  text-align: center;  /* This is a hack for older browsers to center the page */
+}
+
+#container {
+  margin: 0 auto;
+  text-align: left;
+  width: 960px;
+}
+#header {
+  width: 960px;  /* This sets the header to stretch the full page width */
+  height: 100px;
+  background-color: teal;
+  color: white;
+}
+
+#navigation li {
+  display: inline;  /* Make our navigation display in a line */
+  padding: 10px;
+}
+
+#content {
+  float: right;  /* This causes the content to move to the right */
+  width: 700px;  /* We need to set the width whenever we float an element */
+  background-color: midnightblue;
+  color: antiquewhite;
+}
+
+#sidebar {
+  float: left;  /* This causes the sidebar to moce to the left */
+  width: 260px;  /* We need to set the width whenever we float an element */
+  background-color: green;
+  color: white;
+}
+
+#footer {
+  clear: both;  /* This makes sure that the footer clears both the sidebar and content floats */
+  width: 960px;  /* This sets the footer to stretch the full page width */
+  background-color: #666666;
+  color: antiquewhite;
+}
