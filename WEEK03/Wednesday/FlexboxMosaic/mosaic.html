@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+        .container {
+            display: flex;
+            width: 100vw;
+            height: 50vh;
+        }
+
+        .column1 {
+            display: flex;
+        }
+
+
+        .flexContainerCol {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            align-items: column;
+        }
+
+        .flexContainerRow {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            align-items: row;
+        }
+
+        .flex1 {
+            flex: 1;
+        }
+        .flex2 {
+            flex: 2;
+        }
+        .flex3 {
+            flex: 3;
+        }
+        .flex4 {
+            flex: 4;
+        }
+        .flex5 {
+            flex: 5;
+        }
+        .flex6 {
+            flex: 6;
+        }
+        .flex7 {
+            flex: 7;
+        }
+        .flex8 {
+            flex: 8;
+        }
+        .flex9 {
+            flex: 9;
+        }
+        
+        .white {
+            background-color: white;
+        }
+        
+        .red {
+            background-color: red;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .black {
+            background-color: black;
+        }
+
+        .border {
+            border: 1;
+            border-color: black;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- first column -->
+        <div class="red flex1"></div>
+
+        <!-- second column -->
+        <div class="grey flexContainerCol flex1">
+            <!-- left half of second column -->
+            <div class="yellow flex1 flexContainerRow border">
+                <div class="yellow flex1 flexContainerCol border">
+                    <div class="flex1 border"> </div>
+                    <div class="flex2 border"> </div>
+                    <div class="white flexContainerCol border">
+                        <div class="white flex2 border"> </div>
+                        <div class="blue flex2 border"> </div>
+                        <div class="red flex2 border"> </div>
+                    </div>
+                </div>
+                <div class="yellow flex1 flexContainerCol border">
+                <!-- right half of second column -->
+                    <div class="blue flex2 border"> </div>
+                    <div class="red flex2 border"> </div>
+                    <div class="white flex1 border"> </div>
+                    <div class="white flex3 border"> </div>
+                    <div class="white flex3 border"> </div>
+                    <div class="yellow flex2 border"> </div>
+                    <div class="white flex6 border"> </div>
+                    <div class="black flex6 border"> </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- third column -->
+        <div class="blue flex1">
+            <div class="yellow flex1 flexContainerRow border">
+                <div class="yellow flex1 border"></div>
+                <div class="black flex1 border"></div>
+                <div class="white flex4 border"></div>
+            </div>
+            <div class="yellow flex2 flexContainerRow border">
+                <div class="black flex1 flexContainerCol border">
+                    <div class="white flex4 border"></div>
+                </div>
+                <div class="black flex1 flexContainerCol border">
+                        <div class="white flex4 border"></div>
+                </div>
+                <div class="black flex1 flexContainerCol border">
+                        <div class="white flex4 border"></div>
+                </div>
+            </div>
+
+
+
+                
+        </div>
+    </div>
+
+</body>
+</html>
