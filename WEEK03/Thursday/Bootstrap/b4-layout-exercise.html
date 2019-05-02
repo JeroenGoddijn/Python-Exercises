@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .red {
+			background-color: red;
+		}
+		.blue {
+			background-color: blue;
+		}
+		.beige {
+			background-color: beige;
+		}
+		.black {
+			background-color: black;
+		}
+		.yellow {
+			background-color: yellow;
+		}
+		.brown {
+			background-color: brown;
+		}
+		.none {
+			background-color: transparent;
+        }
+		.grey {
+			background-color: grey;
+		}
+
+        .headerHeight {
+            height: 60px;
+        }        
+
+        .heroHeight {
+            height: 250px;
+        }
+
+        .heroText {
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .productTitleHeight {
+            height: 100px;
+        }
+
+        .productTitle {
+            color: black;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .productHeight {
+            height: 200px;
+        }
+
+        .productText{
+            color: black;
+            /* font-size: 40px;
+            font-weight: bold; */
+        }
+
+        .companyHeight {
+            height: 400px;
+        }
+
+        .footerHeight{
+            height: 50px;
+        }
+
+</style>
+  </head>
+  <body>
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-6 headerHeight d-flex align-items-center red">
+                Our Company
+            </div>
+            <div class="col-6 d-flex justify-content-center align-items-center yellow">
+                <nav class="nav justify-content-center">
+                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link" href="#products">Products</a>
+                    <a class="nav-link" href="#">Company</a>
+                    <a class="nav-link" href="#">Blog</a>
+                </nav>
+            </div>
+        </div> <!-- row -->
+      </div> <!-- .container-fluid-->
+
+      <div class="container-fluid">
+          <div class="row heroHeight heroText d-flex justify-content-center align-items-center blue">
+                We Are Awesome
+          </div>
+          <div id="products" class="row productTitleHeight productTitle beige">
+            <div class="col d-flex justify-content-center align-items-center ">Awesomeness</div>
+          </div>
+          <div id="products" class="row productHeight productText d-flex justify-content-center align-items-center beige">
+            <div class="col-4 d-flex justify-content-center">
+                <dl>
+                    <dt>Boldness 1</dt>
+                    <li>Item One</li>
+                    <li>Item Two</li>
+                    <li>Item Three</li>
+                </dl>
+            </div>
+            <div class="col-4 d-flex justify-content-center">
+                <dl>
+                    <dt>Boldness 2</dt>
+                    <li>Item One</li>
+                    <li>Item Two</li>
+                    <li>Item Three</li>
+                </dl>                    
+            </div>
+            <div class="col-4 d-flex justify-content-center">
+                <dl>
+                    <dt>Boldness 3</dt>
+                    <li>Item One</li>
+                    <li>Item Two</li>
+                    <li>Item Three</li>
+                </dl>                      
+            </div>
+          </div>
+          <div id="company" class="row companyHeight d-flex justify-content-center align-items-center brown">
+                <div class="col-4 offset-1 d-flex justify-content-center">
+                    <div class="card">
+                        <img class="card-img-top rounded" src="https://www.digitalcrafts.com/img/team-veronica-lino.png" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Veronica Lino</h4>
+                            <p class="card-text">Immersive Instructor</p>
+                        </div>
+                    </div>                
+                </div>
+                <div class="col-4 offset-2 d-flex justify-content-center">
+                    <div class="card">
+                        <img class="card-img-top rounded" src="https://www.digitalcrafts.com/img/team-sharnee-francis.png" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Shar'nee Francis</h4>
+                            <p class="card-text">Admissions Advisor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid">
+            <div class="row footerHeight d-flex">
+                <div class="col d-flex justify-content-center align-items-center grey">
+                    Footer
+                </div>
+            </div> <!-- row -->
+        </div> <!-- .container-fluid-->
+        
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
