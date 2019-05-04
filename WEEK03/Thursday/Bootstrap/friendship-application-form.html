@@ -1,0 +1,151 @@
+<!-- 
+Your task is to make a "Friend request form".
+
+When completed, people will be able to fill out the form to request to be your friend. You can use their responses to decide if you want to be their friend. For example, I only want to be friends with people who watch Game of Thrones, so I could have a question in my form like:
+
+Do you watch Game of Thrones?
+
+O Yes .   O No .   O I might one day
+
+You can decide what questions are on the form! Have fun with it, but there are some requirements:
+
+Requirements:
+
+    - Use Bootstrap v4 to construct the form. https://getbootstrap.com/docs/4.0/components/forms/
+
+    - Implement a dropdown menu, a textarea, radio buttons, and checkboxes
+
+    - Implement a submit button (make sure to include type="submit")
+
+    - Make the form email yourself when it's submitted (hint: href="mailto:email@address.com")
+ -->
+
+ <!doctype html>
+ <html lang="en">
+   <head>
+     <title>Friendship Application Form</title>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+     <style>
+        .bgimg {
+            background-image: url("https://s3.us-east-2.amazonaws.com/s3.wdsyfm.radio.com/styles/delta__775x515/s3/Guys%20Celebrate%20Their%20Bromance%20With%20%E2%80%98Best%20Friends%E2%80%99%20Photoshoot.jpg?itok=JnURBfPI&c=411d736ab433643efb0a1ceb06dbe9fc");
+            background-repeat: no-repeat;
+            height: 515px;
+            background-position-x: -50px;
+            
+        }
+
+        .formTitle {
+            font-size: 40px;
+            font-weight: bold;
+            color: blue;
+            height: 400px;
+            top: -15px;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .spacer {
+            height: 50px;
+            background-color: transparent;
+        }
+
+        #acceptTermsConditions {
+            font-size: 10px;
+        }
+     </style>
+   </head>
+   <body>
+
+    <div class="container-fluid">    
+        <div class="d-flex row">
+            <div class="col-sm-12 d-flex justify-content-center align-items-center bgimg">
+                <div id="formHeader" class="col-sm-5 d-flex justify-content-baseline flex-wrap align-items-center formTitle">
+                    Friendship <br />Application <br /> Form
+                </div><!-- .formHeader -->
+            </div>
+        </div>
+        <div id="friendshipForm" class="d-flex row">
+            <div class="col-sm-12 d-flex justify-content-center align-items-center spacer"></div>
+            <div class="col-sm-12 offset-1 d-flex justify-content-center align-items-center">
+                <form>
+                    <div id="personFields">
+                    <div class="form-group d-flex row justify-content-center align-items-center">
+                        <label for="inputName" class="col-sm-5 col-form-label">Name: </label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" name="inputName" id="inputName" placeholder="Your Full Name" required>
+                        </div>
+                    </div>
+                    <div class="form-group d-flex row justify-content-center align-items-center">
+                        <label for="inputEmail" class="col-sm-5 col-form-label">Email address: </label>
+                        <div class="col-sm-7">
+                            <input type="email" class="form-control" name="inputEmail" id="inputEmail" placeholder="name@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group d-flex row justify-content-center align-items-center">
+                        <select id="selectPhoneType"class="col-sm-2 form-control text-sm-left">
+                            <option selected>Cell</option>
+                            <option>Home</option>
+                            <option>Work</option>
+                        </select>
+                        <label for="inputPhone" class="col-sm-3 col-form-label">Phone number</label>
+                        <!-- <label for="selectPhoneType" class="col-sm-1 col-form-label">Type</label> -->
+                        <input type="tel" class="col-sm-6 form-control" name="inputPhone" id="inputPhone" placeholder="Phone number">
+                    </div>
+                    </div>  
+                    <hr />
+                    <div id="questionnaireFields">
+                        <div id="question01" class="form-group d-flex row align-items-center">
+                            <label for="question01" class="col-sm-6 col-form-label">Do You Drink Beer? </label>
+                            <div class="form-check col-sm-3">
+                                <input type="radio" class="form-check-input" name="question01" id="question01Radios01" value="yes">
+                                <label class="form-check-label" for="question01Radios01">Yes</label>
+                            </div>
+                            <div class="form-check col-sm-3">
+                                <input type="radio" class="form-check-input" name="question01" id="question01Radios02" value="no">
+                                <label class="form-check-label" for="question01Radios02">No</label>
+                            </div>
+                        </div>
+                        <div id="question02" class="form-group d-flex row align-items-center">
+                                <label for="question02TextArea" class="col-sm-5 col-form-label">What are your favorite beers to drink? </label>
+                                <div class="form-group col-sm-7">
+                                    <textarea class="form-control" id="question02TextArea" rows="6"> </textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="acceptTermsConditions">
+                            <div id="acceptTermsConditionsCheckbox" class="form-group d-flex row justify-content-center align-items-center">
+                                <div class="form-check col-sm-7">
+                                    <input type="checkbox" class="form-check-input" name="acceptTermsConditions" id="acceptTermsConditionsCheckbox01" value="yes" required data-error="You have to accept the Terms and Conditions to continue.">
+                                    <label class="form-check-label" for="acceptTermsConditionsCheckbox01">Agree to <a href="friendship_agreement.html">Terms & Conditions</a></label>
+                                </div>
+                            </div>
+                        </div>
+                                
+                        <div id="submitButton">
+                            <div class="form-group d-flex row justify-content-center align-items-center">
+                                <div class="col-sm-8">
+                                    <button type="submit" class="btn btn-primary">I want to be your Friend!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> <!-- .container-fluid -->
+
+
+     <!-- Optional JavaScript -->
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   </body>
+ </html>
