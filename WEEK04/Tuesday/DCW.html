@@ -13,20 +13,21 @@
 
 <script>
 var mainDiv = document.querySelector('div');
-mainDiv.style = 'width: 100vw; top: 0px; left: 0px;';
+mainDiv.style = 'width: 80%; top: 0px; left: 0px; padding: 10px;';
 
 var nav = document.createElement('nav');
-nav.setAttribute('class','row navbar navbar-default');
+nav.setAttribute('class','col-12 navbar-expand-sm navbar-default');
 
 var containerFluid = document.createElement('div');
-containerFluid.setAttribute('class', 'container-fluid row');
-containerFluid.style = 'background-color: lightblue';
+containerFluid.setAttribute('class', 'container-fluid row position-relative justify-content-start align-items-center');
+containerFluid.style = 'background-color: blue; color:white; height: 70px;';
 
 var navbarHeader = document.createElement('div');
 navbarHeader.setAttribute('class', 'navbar-header');
 
 var navBrand = document.createElement('a');
 navBrand.setAttribute('class', 'col-sm-4 navbar-brand');
+navBrand.style = 'font-size: 40px; font-weight: 600;';
 navBrand.textContent = 'HighOnCoding';
 
 mainDiv.appendChild(nav);
@@ -36,14 +37,26 @@ navbarHeader.appendChild(navBrand);
 
 var navMenuDiv = document.createElement('div');
 containerFluid.appendChild(navMenuDiv);
-navMenuDiv.setAttribute('class', 'col-sm-8');
+navMenuDiv.setAttribute('class', 'collapse navbar-collapse justify-content-start');
 
 var navLinkList = document.createElement('ul');
-navLinkList.setAttribute('class', 'nav navbar-nav');
+navLinkList.setAttribute('class', 'navbar-nav nav-fill mr-auto mt-2 mt-lg-0 w-100');
 navLinkList.style = 'list-style: none';
 
-var navLink1 = document.createElement('li');
-var navLink2 = document.createElement('li');
+var navListItem1 = document.createElement('li');
+var navListItem2 = document.createElement('li');
+
+navListItem1.setAttribute('class', 'nav-item');
+navListItem2.setAttribute('class', 'nav-item');
+
+var navLink1 = document.createElement('a');
+var navLink2 = document.createElement('a');
+
+navLink1.setAttribute('class', 'nav-link');
+navLink2.setAttribute('class', 'nav-link');
+navLink1.style = 'font-size: 24px; font-weight: 500;';
+navLink2.style = 'font-size: 24px; font-weight: 500;';
+
 
 navLink1.textContent = 'Home';
 navLink2.textContent = 'Categories';
@@ -55,7 +68,8 @@ navLinkList.appendChild(navLink2);
 
 // Curse of the Current Reviews
 var introDiv = document.createElement('div');
-introDiv.style = 'background-color: lightgrey';
+introDiv.style = 'background-color: lightgrey; color: #464646; padding: 20px; align: center; margin-top: 20px;';
+introDiv.setAttribute('class' , 'container-fluid position-relative w-75 justify-content-center align-items-center')
 
 var introH1 = document.createElement('h1');
 introH1.textContent = 'Curse of the Current Reviews';
@@ -67,20 +81,25 @@ mainDiv.appendChild(introDiv);
 introDiv.appendChild(introH1);
 introDiv.appendChild(introParagraph);
 
+// Content Sections
 var sectionDiv = document.createElement('div');
+sectionDiv.style = 'background-color: transparent; padding: 20px; align: center; margin-top: 20px;';
+sectionDiv.setAttribute('class' , 'container-fluid position-relative w-75 justify-content-center align-items-center')
 
 var section01H2 = document.createElement('h2');
 section01H2.textContent = 'Hello WatchKit';
+section01H2.style = 'color: blue;';
 
 var section01Paragraph01 = document.createElement('p');
 section01Paragraph01.textContent = 'Last month Apple released the anticipated WatchKit Framework for developers in the form of framework enable the developers to create Apple Watch applications. In this article we are getting started with the WatchKit framework and developing apps for the Apple Watch.';
 
 var section01Bar = document.createElement('div');
-section01Bar.style = 'background-color: orange; color: white; font-weight: 600';
+section01Bar.style = 'background-color: orange; color: white; font-weight: 600; margin-bottom: 30px;';
 section01Bar.textContent = '12 comments     124 likes';
 
 var section02H2 = document.createElement('h2');
 section02H2.textContent = 'Introduction to Swift';
+section02H2.style = 'color: blue;';
 
 var section02Paragraph01 = document.createElement('p');
 section02Paragraph01.textContent = 'Swift is a modern programming language developed by  Apple to create the next generation of fairly new language and still in development but it clearly reflects the intentions and the future basic concepts in the Swift language and how you can get started.';
