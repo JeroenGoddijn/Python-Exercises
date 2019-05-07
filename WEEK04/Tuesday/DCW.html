@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div id="container">
+
+    </div>
+
+
+<script>
+var mainDiv = document.querySelector('div');
+mainDiv.style = 'width: 100vw; top: 0px; left: 0px;';
+
+var nav = document.createElement('nav');
+nav.setAttribute('class','row navbar navbar-default');
+
+var containerFluid = document.createElement('div');
+containerFluid.setAttribute('class', 'container-fluid row');
+containerFluid.style = 'background-color: lightblue';
+
+var navbarHeader = document.createElement('div');
+navbarHeader.setAttribute('class', 'navbar-header');
+
+var navBrand = document.createElement('a');
+navBrand.setAttribute('class', 'col-sm-4 navbar-brand');
+navBrand.textContent = 'HighOnCoding';
+
+mainDiv.appendChild(nav);
+nav.appendChild(containerFluid);
+containerFluid.appendChild(navbarHeader);
+navbarHeader.appendChild(navBrand);
+
+var navMenuDiv = document.createElement('div');
+containerFluid.appendChild(navMenuDiv);
+navMenuDiv.setAttribute('class', 'col-sm-8');
+
+var navLinkList = document.createElement('ul');
+navLinkList.setAttribute('class', 'nav navbar-nav');
+navLinkList.style = 'list-style: none';
+
+var navLink1 = document.createElement('li');
+var navLink2 = document.createElement('li');
+
+navLink1.textContent = 'Home';
+navLink2.textContent = 'Categories';
+
+containerFluid.appendChild(navLinkList);
+navLinkList.appendChild(navLink1);
+containerFluid.appendChild(navLinkList);
+navLinkList.appendChild(navLink2);
+
+// Curse of the Current Reviews
+var introDiv = document.createElement('div');
+introDiv.style = 'background-color: lightgrey';
+
+var introH1 = document.createElement('h1');
+introH1.textContent = 'Curse of the Current Reviews';
+
+var introParagraph = document.createElement('p');
+introParagraph.textContent = 'When you want to buy any application from the Apple iTunes store you have more choices scroll past the application description completely avoiding it like ads displayedo n the right is dependent on three important factors price, screenshot and reviews.';
+
+mainDiv.appendChild(introDiv);
+introDiv.appendChild(introH1);
+introDiv.appendChild(introParagraph);
+
+var sectionDiv = document.createElement('div');
+
+var section01H2 = document.createElement('h2');
+section01H2.textContent = 'Hello WatchKit';
+
+var section01Paragraph01 = document.createElement('p');
+section01Paragraph01.textContent = 'Last month Apple released the anticipated WatchKit Framework for developers in the form of framework enable the developers to create Apple Watch applications. In this article we are getting started with the WatchKit framework and developing apps for the Apple Watch.';
+
+var section01Bar = document.createElement('div');
+section01Bar.style = 'background-color: orange; color: white; font-weight: 600';
+section01Bar.textContent = '12 comments     124 likes';
+
+var section02H2 = document.createElement('h2');
+section02H2.textContent = 'Introduction to Swift';
+
+var section02Paragraph01 = document.createElement('p');
+section02Paragraph01.textContent = 'Swift is a modern programming language developed by  Apple to create the next generation of fairly new language and still in development but it clearly reflects the intentions and the future basic concepts in the Swift language and how you can get started.';
+
+var section02Bar = document.createElement('div');
+section02Bar.style = 'background-color: orange; color: white; font-weight: 600';
+section02Bar.textContent = '15 comments     45 likes';
+
+
+mainDiv.appendChild(sectionDiv);
+sectionDiv.appendChild(section01H2);
+sectionDiv.appendChild(section01Paragraph01);
+sectionDiv.appendChild(section01Bar);
+mainDiv.appendChild(sectionDiv);
+sectionDiv.appendChild(section02H2);
+sectionDiv.appendChild(section02Paragraph01);
+sectionDiv.appendChild(section02Bar);
+</script>
+</body>
+
+</html>

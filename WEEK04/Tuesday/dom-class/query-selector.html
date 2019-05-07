@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Query Selector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div id="page">
+      <h1 id="header">List King</h1>
+      <h2>Buy groceries</h2>
+      <ul>
+        <li id="one" class="hot"><em>fresh</em> figs</li>
+        <li id="two" class="hot">pine nuts</li>
+        <li id="three" class="hot">honey</li>
+        <li id="four">balsamic vinegar</li>
+      </ul>
+    </div>
+    
+    <script>
+    var mainDiv = document.querySelector('div');
+
+    var h1 = document.createElement('h1');
+
+    h1.textContent = 'Digital Crafts';
+
+    var img = document.createElement('img');
+
+    img.setAttribute('src', 'https://i.redd.it/b6a5916s65621.jpg')
+
+    img.setAttribute('height', '200px');
+
+    mainDiv.appendChild(h1);
+    mainDiv.appendChild(img);
+
+    var innerDiv = document.createElement('div');
+
+    innerDiv.style = 'background-color: yellow';
+
+    var innerH4 = document.createElement('h4');
+    innerH4.textContent = 'Cant-Man';
+
+    innerDiv.appendChild(innerH4);
+    mainDiv.appendChild(innerDiv);
+
+    </script>
+  </body>
+</html>
