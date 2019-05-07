@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    `JavaScript Exercises
+You will be rewriting in JavaScript a series of exercises you've written in Python. There will also be a few new challenges. Because JavaScript's pop-up prompt is annoying and doesn't work in Node, we won't take in any user input. Instead, you will write each exercise as a function, and any required input will be supplied to the function as arguments.
+
+Madlib
+Write a madlib function, which is given a name and a subject. It will return(not print) a new string: (name)'s favorite subject in school is (subject).
+
+Example:
+
+> madlib('Anushka', 'art'); 
+'Anushka's favorite subject in school is art.'
+` 
+function madlib(name, subject) {
+    return name + "'s favorite subject in school is " + subject;
+}
+
+console.log(madlib("Jack", "math"));
+
+`
+Tip Calculator
+Write a function tipAmount that is given the bill amount and the level of service (one of good, fair and poor) and returns the dollar amount for the tip. Based on:
+good -> 20%
+fair -> 15%
+bad -> 10%
+`
+function tipAmount(billAmount, serviceLevel) {
+    if(serviceLevel == "good") {
+        return billAmount * 0.2;
+    }
+    else if(serviceLevel == "fair") {
+        return billAmount * 0.15;
+    }
+    else if(serviceLevel=="bad") {
+        return billAmount * 0.1;
+    }
+    else {
+        return billAmount * 0;
+    }
+}
+
+console.log(tipAmount(100, "good"));
+`
+> tipAmount(100, 'good') 
+20 
+> tipAmount(40, 'fair') 
+6
+
+Tip Calculator 2
+Write a function totalAmount that takes the same arguments as tipAmount except it returns the total as the tip amount plus the bill amount. This function may make use of tipAmount as a sub-task.
+`
+function totalAmount(billAmount, serviceLevel) {
+    return billAmount + tipAmount(billAmount, serviceLevel);
+}
+
+console.log(totalAmount(100, "good"));
+
+`
+> totalAmount(100, 'good') 
+120 
+> totalAmount(40, 'fair') 
+46
+Print Numbers
+Write a function printNumbers which is given a start number and an end number. It will print the numbers from one to the other, one per line:
+`
+function printNumbers(startNumber, endNumber) {
+    while(startNumber <= endNumber) {
+        console.log(startNumber);
+        startNumber = startNumber + 1;
+    }
+}
+
+printNumbers(1,10);
+`
+> printNumbers(1, 10) 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10
+Write two versions of the above function. One using a while loop and the other using a for loop.
+`
+function printNumeros(startNumero, endNumero) {
+    for(startNumero; startNumero <= endNumero; startNumero++) {
+        console.log(startNumero);
+    }
+}
+
+printNumeros(1,10);
+
+`
+Print a Square
+Write a function printSquare which is given a size and prints a square of that size using asterisks.
+`
+function printSquare(size) {
+    var strt = 1;
+    for(strt; strt <= size; strt++) {
+        console.log("o".repeat(size));
+    }
+}
+
+printSquare(5);
+`
+> printSquare(5) 
+***** 
+***** 
+***** 
+***** 
+*****
+Print a box
+Write function printBox which is given a width and height and prints a hollow box of those given dimensions.
+`
+function printBox(width, height) {
+    var x = 1;
+    while(x <= height) {
+        if(x == 1 || x == height) {
+            console.log("o".repeat(width-1));
+        }
+        else {
+            console.log("o" + " ".repeat(width - 2) + "o");
+        }
+        x++;
+    }
+}
+
+printBox(6,4);
+`
+> printBox(6, 4) 
+****** 
+*    * 
+*    * 
+******
+Print a Banner
+Write a function printBanner which is given some text and prints a banner with a border surrounding the text. The border has to stretch to the length of the text.
+`
+function printBanner(bannerText) {
+    var x = 1;
+    while(x <= 3) {
+        if(x == 1 || x == 3) {
+            console.log("o".repeat(bannerText.length + 4));
+        }
+        else {
+            console.log("o" + " " + bannerText + " " + "o");
+        }
+        x++;
+    }
+}
+
+printBanner("Welcome to DigitalCrafts", 3);
+
+`
+> printBanner('Welcome to DigitalCrafts') 
+**************************** 
+* Welcome to DigitalCrafts * 
+****************************
+Leetspeak
+Write a function leetspeak which is given a string, and returns the leetspeak equivalent of the string. To convert text to its leetspeak version, make the following substitutions:
+
+A => 4
+E => 3
+G => 6
+I => 1
+O => 0
+S => 5
+T => 7
+> leetspeak('Leet') 
+l337
+Long-long Vowels
+Write a function, which is given a string, return the result of extending any long vowels to the length of 5.
+
+> longLongVowels('Good') 
+'Goooood' 
+> longLongVowels('Cheese') 
+'Cheeeeese' 
+> longLongVowels('Man') 
+'Man'
+Just the positives
+Write a function positiveNumbers which is given an array of numbers and returns a new array containing only the positive numbers within the given array.
+
+> positiveNumbers([1, -3, 5, -3, 0]) 
+[1, 5, 0] 
+> positiveNumbers([1, 2, 3]) 
+[1, 2, 3] 
+> positiveNumbers([-1, -2, -3]) []
+Bonus: Caesar Cipher
+Write a function cipher which is given a string, an offset, and returns the Caesar cipher of the string.
+
+> cipher('Genius without education is like silver in the mine')
+'Travhf jvgubhg rqhpngvba vf yvxr fvyire va gur zvar'
+Bonus: Caesar Cipher 2
+Write a function decipher which is given a string, an offset, and returns the original message.
+
+> decipher('Travhf jvgubhg rqhpngvba vf yvxr fvyire va gur zvar', offset)
+'Genius without education is like silver in the mine'
+`    
+        
+    </script>
+    
+</body>
+</html>
