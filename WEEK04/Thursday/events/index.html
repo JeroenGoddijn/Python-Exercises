@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <ul>
+  <!-- <ul>
     <li><img src="images/ylw.gif" alt="yellow" id="yellow"></li>
     <li><img src="images/org.gif" alt="orange" id="orange"></li>
     <li><img src="images/ppl.gif" alt="purple" id="purple"></li>
@@ -16,17 +16,48 @@
     <li><img src="images/ygr.gif" alt="ygreen" id="ygreen"></li>
     <li><img src="images/gry.gif" alt="gray" id="gray"></li>
     <li><img src="images/red.gif" alt="red" id="red"></li>
-  </ul>
+  </ul> -->
 
-  <script>
+<button>A</button>
+<button>B</button>
+<button>C</button>  <script>
+
+    document.body.addEventListener('click',function(e){
+      if(e.target.nodeName === 'BUTTON'){
+        console.log('clicked ' + e.target.textContent)
+      }
+    })
+
+
+
+
+  //   <!-- <div id="result">
+
+
+  //   </div>
+  // <script>
+
+  //   window.addEventListener('click',function(e){
+  //     document.getElementById('result')
+  //     document.querySelector('#result').textContent = 'You knocked?'
+  //   }) -->
 
     // var li = document.getElementById('yellow');
-    var ul = document.querySelector('ul');
-
-    ul.addEventListener('click', function(e) {
-      alert(e.target.alt + ' box clicked')
-      console.log(e)
-    })
+    // var ul = document.querySelector('ul');
+    // ul.addEventListener('click', function(e) {
+    //   // alert(e.target.alt + ' box clicked')
+    //   // console.log(e)
+    //   switch(e.target.id) {
+    //     case 'red':
+    //       console.log('red')
+    //       break;
+    //     case 'orange':
+    //       console.log('orange')
+    //       break;
+    //     default:
+    //       break;
+    //   }
+    // })
     // var li = document.getElementById('yellow');
     // li.onmouseclick = function () {
     //   console.log('Hello everyone!!!!!');
