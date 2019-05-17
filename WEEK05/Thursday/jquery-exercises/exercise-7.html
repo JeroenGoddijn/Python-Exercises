@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    /*
+    Make a Todo List
+
+    0. Make it so that after entering the task description, in the text field and clicking the "Add Task" button, a new task appears inside the element with the id todo-list.
+    1. the ability to remove tasks (add an x button)
+    2. the ability to check off tasks - strikes them out wo removing (add a checkbox)
+    3. the ability to delete a task
+    4. the ability to edit an existing task
+
+    */
+
+    $(function () {
+      //0 && 1
+      $("#add-button").on('click', function(e) {
+        // put input text in into newTodo variable
+        let newTodo = $("<li>").text($("input#description").val());
+        // add delete button to each new Todo
+        let deleteButton = $("<button id='delete-button'>X</button>");
+        // add edit button to each new Todo
+        let editButton = $("<button id='edit-button'>edit</button>");
+        // add checkbox to each new Todo
+        let checkBox = $("<input id='markComplete' type='checkbox' />");
+        $("#todo-list").append(newTodo);
+        $(newTodo).append(checkBox, editButton, deleteButton);
+        //after moving new task to todo-list clear input field
+        $("input#description").val("");
+      //2 
+        $("input#markComplete").click(function (e) {
+          // if checkbox is checked, strikethrough todo
+          if ($(this).is(':checked')) {
+              // alert("true");
+              $(this).closest("li").css('text-decoration', 'line-through');
+          } else {
+          // if checkbox is unchecked, remove strikethrough from todo
+              // alert("false");
+              $(this).closest("li").css('text-decoration', '');
+          }
+        })
+
+
+      //3 
+        $("button#delete-button").click(function(e) {
+          // delete this todo
+          $(this).closest("li").remove();
+        })
+
+      //4
+      $("button#edit-button").click(function(e) {
+        // determine length of todo that user wants to edit (since it will include the content from EDIT button and DELETE button)
+        let todoLength = $(this).closest("li").text().length;
+        // console.log(todoLength);
+        // set the variable to the characters of the string MINUS the last 5 characters for button text (EDIT + X)
+        let editTodo = $(this).closest("li").text().slice(0,todoLength-5);
+        // console.log(editTodo);
+        // set the input field value to the Todo that user wants to edit
+        $("input#description").val(editTodo);
+        // remove the Todo that user is editing, so it will be replaced by new (edited) Todo once user clicks ADD button
+        $(this).closest("li").remove();
+      });
+    });
+  });
+
+    </script>
+    <style>
+    #wrapper {
+      max-width: 480px;
+      margin: auto;
+    }
+
+    #description, #search, #todo-list {
+      font-size: 1.5em;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <input id="description" type="text" name="description">
+      <button id="add-button">Add Task</button>
+      <ul id="todo-list">
+        <li>Feed the cat</li>
+      </ul>
+    </div>
+  </body>
+</html>
