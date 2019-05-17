@@ -176,7 +176,46 @@ I => 1
 O => 0
 S => 5
 T => 7
-> leetspeak('Leet') 
+`
+function leetSpeak(sentence) {
+    var words = sentence.split(" ");
+    var lsWords = "";
+    for(var i = 0; i <words.length; i++) {
+        // console.log(words[i]);
+        for(var j = 0; j < words[i].length; j++) {
+            if(words[i][j].toLowerCase() == "a") {
+                words[i][j]="4";
+            }
+            else if(words[i][j].toLowerCase() == "e") {
+                words[i][j]=3;
+            }
+            else if(words[i][j].toLowerCase() == "g") {
+                words[i][j]=9;
+            }
+            else if(words[i][j].toLowerCase() == "i") {
+                words[i][j]=1;
+            }
+            else if(words[i][j].toLowerCase() == "o") {
+                words[i][j]=0;
+            }
+            else if(words[i][j].toLowerCase() == "s") {
+                words[i][j]=5;
+            }
+            else if(words[i][j].toLowerCase() == "t") {
+                words[i][j]=7;
+            }
+            // else {
+            //     // console.log(words[i][j]);
+            // }
+        console.log(words[i][j]);
+        }
+    // console.log(leetSpeakWords);
+    }
+console.log(lsWords);
+}
+leetSpeak("total awesomeness");
+
+`> leetspeak('Leet') 
 l337
 Long-long Vowels
 Write a function, which is given a string, return the result of extending any long vowels to the length of 5.
