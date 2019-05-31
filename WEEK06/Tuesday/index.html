@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    #map {
+        height: 400px;
+        width: 100%;
+    }
+
+
+</style>
+<body>
+
+    <div id="map">
+
+    </div>
+
+    <script>
+        var options = {
+            center: {lat: 29.7613625, lng: -95.4813625},
+            zoom: 13
+        }
+        function initMap(){
+            var maps = new google.maps.Map(document.getElementById('map'), options)
+
+            // add Marker when user clicks map
+            google.maps.event.addListener(maps, 'click', (event)=>{
+                addMarker({coords: event.latLng})
+            })
+
+            function addMarker(props) {
+                //add Marker
+                var marker = new google.maps.Marker({
+                    // position: {lat: 29.763113, lng: -95.479077},
+                    position: props.coords,
+                    map: maps,
+                })
+
+                if (props.image){
+                    marker.setIcon(props.image)
+                }
+                if (props.infoWindow){
+                    // info Window
+                    var infoWindow = new google.maps.InfoWindow({
+                        content: props.infoWindow
+                   })
+                }
+
+                marker.addListener('click', ()=>{
+                infoWindow.open(maps, marker)
+                })
+
+            }
+
+
+
+            addMarker({coords:{lat: 29.763113, lng: -95.479077}, infoWindow: '<h1>Island Grill MoFo</h1>', image: 'https://www.islandgrillhouston.com/images/logo.png'});
+
+    }
+    
+    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTLHA4kWqkubsSo6VGTsiWl_lhhs9TNAQ&callback=initMap"
+        type="text/javascript"></script>
+</body>
+
+</html>
