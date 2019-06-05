@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- create a form. Action= defines where to go with the info in the form -->
+    <form action="/" method="POST">
+        name: <input type="text" id="name" name="name"> <br />
+        email: <input type="email" id="email" name="email"> <br />
+        mobile: <input type="tel" id="mobile-number" name="mobile"> <br />
+        <button type="submit" id="submitButton">Submit</button>
+
+
+    </form>
+
+    <div id="message"></div>
+
+    <!-- <script>
+        let button = document.getElementById('submitButton');
+        button.addEventListener('click', (e) => {
+
+            e.preventDefault();
+
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    mobile: document.getElementById('mobile-number').value
+                })
+            })
+                .then((data) => {
+                    document.getElementById('message').innerHTML = "Form data has been successfully sent."
+                })
+        })
+
+    </script> -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script src="js/forms.js">
+    </script>
+
+</body>
+
+</html>
