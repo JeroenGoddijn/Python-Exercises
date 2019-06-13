@@ -1,0 +1,17 @@
+{
+    "data": [{
+        "fname" : "Sabrina",
+        "lname" : "Goldfarb",
+        "city" : "New York"
+    },
+    {
+        "fname" : "Garrett",
+        "lname" : "Weaver",
+        "city" : "Crosby"       
+    },
+    {
+        "fname" : "Stoney",
+        "lname" : "Maloney",
+        "city" : "Amsterdam"    
+    }]
+}
